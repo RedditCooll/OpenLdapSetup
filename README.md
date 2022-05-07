@@ -107,3 +107,5 @@ docker inspect {container_id} # e.g. "IPAddress": "172.17.0.2"
 # try to add some entries to see if the data is synchronized.
 ```
 
+## Maintenance by Web
+- Use `phpLDAPadmin` to view and edit ldap data, [installation example](./Install_phpAdmin.MD)
