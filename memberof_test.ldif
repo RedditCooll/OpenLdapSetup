@@ -1,0 +1,21 @@
+dn: cn=usercoll,ou=users,dc=redditcoll,dc=com
+cn: usercoll
+sn: reddit
+mail: usercoll@test.com
+uid: 001
+uidNumber: 6666
+gidNumber: 1111
+homeDirectory: /home/usercoll
+userPassword: {SHA}itspassword=
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+
+dn: ou=group,dc=redditcoll,dc=com
+objectClass: top
+objectClass: organizationalUnit
+
+dn: cn=engineer,ou=group,dc=redditcoll,dc=com
+objectClass: groupOfNames
+cn: engineer
+member: cn=usercoll,ou=users,dc=redditcoll,dc=com

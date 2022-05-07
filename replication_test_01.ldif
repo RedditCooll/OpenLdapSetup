@@ -1,0 +1,30 @@
+dn: cn=config
+changetype: modify
+replace: olcServerID
+olcServerID: 001
+
+dn: olcDatabase={2}mdb,cn=config
+changetype: modify
+replace: olcSyncRepl
+olcSyncRepl: rid=001
+             provider=ldap://172.17.0.3:1389
+             bindmethod=simple
+             binddn="cn=admin,dc=redditcoll,dc=com"
+             credentials=adminpassword
+             searchbase="dc=redditcoll,dc=com"
+             filter="(objectClass=*)"
+             scope=sub
+             schemachecking=off
+             attrs="*,+"
+             type=refreshAndPersist
+             retry="60 +"
+             interval=00:00:01:00
+-
+add: olcMirrorMode
+olcMirrorMode: TRUE
+-
+add: olcDbIndex
+olcDbIndex: entryUUID eq
+-
+add: olcDbIndex
+olcDbIndex: entryCSN eq

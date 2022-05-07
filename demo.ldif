@@ -1,0 +1,14 @@
+# add ou entry
+dn: ou=demoOrg,dc=redditcoll,dc=com
+objectClass: organizationalUnit
+
+# add cn entry
+dn: cn=demoUser,ou=demoOrg,dc=redditcoll,dc=com
+objectClass: top
+objectClass: organizationalPerson
+objectClass: demo
+ou: demoOrg
+cn: demoUser
+sn: demoUser
+demoAttrStr: this is str attr
+demoAttrBool: TRUE
